@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top left, rgba(250, 204, 21, 0.2), transparent 30%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.13), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.14), transparent 28%),
+    linear-gradient(135deg, #f7f1e8 0%, #f5efe7 42%, #eef2ff 100%);
+  color: #182033;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1;
+  width: min(1440px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 1.75rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 1.75vw, 1.35rem);
+  align-items: start;
+}
+
+.logo {
+  grid-column: 1 / -1;
+  width: clamp(150px, 15vw, 200px);
+  margin: 0;
+}
+
+.eyebrow {
+  grid-column: 1 / -1;
+  margin: 0.1rem 0 0;
+  max-width: 34ch;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(24, 32, 51, 0.62);
+}
+
+h1 {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.8rem, 7.6vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  max-width: 10ch;
+}
+
+.accent {
+  color: #2847d8;
+}
+
+h1,
+.eyebrow,
+.card-title,
+.card-text,
+footer {
+  text-wrap: balance;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+  min-height: clamp(430px, 70vh, 780px);
+  padding: clamp(1.2rem, 1.8vw, 1.9rem);
+  border: 1px solid rgba(24, 32, 51, 0.09);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 28px 70px rgba(24, 32, 51, 0.12);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.left {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 250, 244, 0.95));
+}
+
+.right {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(240, 246, 255, 0.96));
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(90deg, #f59e0b, #d97706 45%, #2847d8 100%);
+}
+
+.right.card::before {
+  background: linear-gradient(90deg, #2847d8, #6366f1 45%, #22c55e 100%);
+}
+
+.tile-image {
+  width: min(46%, 330px);
+  aspect-ratio: 0.9;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 42px rgba(24, 32, 51, 0.18);
+  margin-bottom: 1rem;
+}
+
+.left .tile-image {
+  float: left;
+  margin: 0 1rem 0.7rem 0;
+}
+
+.right .tile-image {
+  float: right;
+  margin: 0 0 0.7rem 1rem;
+}
+
+.card-title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.card-text,
+.card p {
+  margin: 0;
+  font-size: clamp(1rem, 1.25vw, 1.075rem);
+  line-height: 1.78;
+  color: rgba(24, 32, 51, 0.8);
+}
+
+footer {
+  width: min(1400px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0 0 1.1rem;
+  text-align: right;
+  color: rgba(24, 32, 51, 0.7);
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 34px 80px rgba(24, 32, 51, 0.16);
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .logo,
+  h1 {
+    grid-column: auto;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .tile-image {
+    width: min(44%, 220px);
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    width: min(100%, calc(100% - 1rem));
+    padding: 0.7rem 0.45rem 0.9rem;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 12vw, 4rem);
+  }
+
+  .card {
+    padding: 1rem;
+    border-radius: 24px;
+  }
+
+  .tile-image {
+    width: min(48%, 150px);
+    border-radius: 16px;
+    margin-bottom: 0.75rem;
+  }
+
+  .left .tile-image {
+    margin-right: 0.85rem;
+  }
+
+  .right .tile-image {
+    margin-left: 0.85rem;
+  }
+
+  footer {
+    width: min(100%, calc(100% - 1rem));
+    text-align: center;
+    letter-spacing: 0.12em;
+  }
+}
+
