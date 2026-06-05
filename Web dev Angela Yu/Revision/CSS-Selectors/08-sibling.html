@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      8. Sibling Selectors 
+      Adjacent (+) targets only the strictly next sibling element.
+      General (~) targets all following siblings.
+    */
+    
+    h2 + p {
+      color: red; /* Only the FIRST <p> after h2 */
+    }
+
+    h3 ~ p {
+      color: blue; /* ALL <p> after h3 */
+    }
+  </style>
+</head>
+<body>
+  <h2>Adjacent Sibling (+)</h2>
+  <p>I am immediately after h2. I am red.</p>
+  <p>I am NOT immediately after h2. Normal.</p>
+  <hr>
+  <h3>General Sibling (~)</h3>
+  <p>I come after h3. I am blue.</p>
+  <div>Not a p</div>
+  <p>I also come after h3. I am also blue.</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      5. flex-wrap 
+      By default, flex items will try to fit on one line (nowrap).
+      `wrap` makes them break onto a new line if they run out of space.
+    */
+    .container {
+      display: flex;
+      flex-wrap: wrap; /* Allows wrapping to the next row */
+      background-color: #eee;
+      padding: 10px;
+      width: 400px; /* Constrain container width */
+    }
+    .item {
+      background-color: #E91E63; color: white; 
+      padding: 20px; margin: 5px; 
+      width: 100px; /* Fixed width to force wrapping */
+    }
+  </style>
+</head>
+<body>
+  <h1>flex-wrap</h1>
+  <p>Container width is 400px. Items are 100px. They will wrap to a new line instead of squeezing to fit.</p>
+  <div class="container">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+</body>
+</html>

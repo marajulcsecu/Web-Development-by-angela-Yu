@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      4. !important
+      Adding !important forces a rule to win, overriding the normal Cascade,
+      Order, and Specificity rules.
+      (Use this sparingly, as it makes debugging CSS very hard later!)
+    */
+    
+    /* Even though this is just an element selector... */
+    p {
+      color: red !important;
+    }
+
+    /* ...and this ID is highly specific AND comes later... */
+    #special {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>!important keyword</h1>
+  <p id="special">
+    Normally, I should be blue because my ID is highly specific. 
+    But I am red because the basic paragraph rule used <strong>!important</strong>.
+  </p>
+</body>
+</html>

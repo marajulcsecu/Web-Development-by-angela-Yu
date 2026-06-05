@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      6. Descendant Selector 
+      Targets an element that is inside another element (any level deep).
+      Separated by a space.
+    */
+    .card p {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- This is a descendant of .card -->
+    <p>I am inside the card. I am orange.</p>
+    <div>
+      <!-- This is also a descendant of .card, just deeper -->
+      <p>I am also inside the card (deeper). I am orange.</p>
+    </div>
+  </div>
+  <p>I am outside the card. I am normal.</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      3. justify-content 
+      Aligns items horizontally (along the main axis).
+      Common values: flex-start, center, flex-end, space-between, space-around.
+    */
+    .container {
+      display: flex;
+      justify-content: space-between; /* Pushes first to start, last to end, evenly spaces middle */
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .container-center {
+      display: flex;
+      justify-content: center; /* Groups items in the exact middle */
+      background-color: #eee;
+      padding: 10px;
+    }
+    .item { background-color: #ff9800; padding: 15px; border: 1px solid #fff; }
+  </style>
+</head>
+<body>
+  <h1>justify-content</h1>
+  <h2>space-between</h2>
+  <div class="container">
+    <div class="item">Left</div><div class="item">Middle</div><div class="item">Right</div>
+  </div>
+
+  <h2>center</h2>
+  <div class="container-center">
+    <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+  </div>
+</body>
+</html>

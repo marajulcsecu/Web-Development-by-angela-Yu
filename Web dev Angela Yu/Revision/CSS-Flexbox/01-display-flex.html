@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      1. display: flex 
+      Turning an element into a flex container puts its direct children 
+      into a flexible layout, side-by-side by default.
+    */
+    .container {
+      display: flex;
+      background-color: #eee;
+      padding: 10px;
+      border: 2px solid #ccc;
+    }
+    .item {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      margin: 5px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>display: flex</h1>
+  <p>The container is now a flex container. The items sit side by side.</p>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>

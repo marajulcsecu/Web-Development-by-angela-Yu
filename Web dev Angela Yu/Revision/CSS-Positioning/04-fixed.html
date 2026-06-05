@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      4. Fixed
+      Removed from the normal flow.
+      Positions itself relative to the BROWSER WINDOW (viewport).
+      It stays exactly where it is EVEN WHEN YOU SCROLL.
+    */
+    body {
+      height: 2000px; /* Make the page long so we can scroll */
+      background: linear-gradient(white, gray);
+    }
+    
+    .fixed-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0; /* Stretch across the top */
+      background-color: #FF9800; color: white;
+      padding: 15px; text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed-nav">
+    I am a Fixed Navbar. Scroll down, I won't move!
+  </div>
+  
+  <h1 style="margin-top: 100px;">position: fixed</h1>
+  <p>Scroll down to see the effect. The orange bar is pinned to the top of your screen.</p>
+</body>
+</html>

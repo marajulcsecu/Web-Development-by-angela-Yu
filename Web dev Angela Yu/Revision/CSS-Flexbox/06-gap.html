@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      6. gap 
+      Adds dedicated spacing between flex items.
+      Much easier than using margin on items!
+    */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* 20px space between items both up/down and left/right */
+      background-color: #eee;
+      padding: 10px;
+    }
+    .item {
+      background-color: #00BCD4; color: white; 
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>gap</h1>
+  <p>Notice how `gap` only adds space BETWEEN items, not on the outside edges.</p>
+  <div class="container">
+    <div class="item">One</div>
+    <div class="item">Two</div>
+    <div class="item">Three</div>
+    <div class="item">Four</div>
+  </div>
+</body>
+</html>

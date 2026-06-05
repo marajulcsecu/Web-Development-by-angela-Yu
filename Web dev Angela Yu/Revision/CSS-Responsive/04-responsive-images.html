@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+      4. Responsive Images
+      Images naturally want to show at their original pixel resolution.
+      This one rule fixes 99% of image overflow issues.
+    */
+    body { font-family: Arial; }
+    
+    img {
+      max-width: 100%; /* Never grow larger than your parent container */
+      height: auto;    /* Keep the aspect ratio proportional */
+    }
+
+    .container {
+      border: 3px solid black;
+      width: 50%; /* The container is 50% of the screen */
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Images</h1>
+  <p>Resize the window. The image shrinks with its container and never overflows.</p>
+  
+  <div class="container">
+    <!-- A 1000px wide image placeholder -->
+    <img src="https://via.placeholder.com/1000x300.png?text=I+shrink+automatically!" alt="Placeholder">
+  </div>
+</body>
+</html>

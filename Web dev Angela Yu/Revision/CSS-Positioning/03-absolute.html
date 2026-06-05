@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      3. Absolute
+      Removed from the normal document flow entirely (no gap left behind!).
+      Positions itself relative to the NEAREST ANCESTOR that has position: relative (or absolute/fixed).
+      If it finds no such ancestor, it positions relative to the entire page (<body>).
+    */
+    .box { padding: 10px; color: white; }
+    .normal { width: 100px; height: 100px; background-color: #9E9E9E; margin: 5px; }
+
+    /* The Parent is the "anchor" */
+    .parent-anchor {
+      position: relative; 
+      width: 400px; height: 300px;
+      background-color: #EEEEEE; border: 2px dashed #000;
+      margin: 40px;
+    }
+    
+    .absolute-box {
+      background-color: #4CAF50;
+      position: absolute;
+      /* Pin it to the bottom-right of the nearest relative parent */
+      bottom: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>position: absolute</h1>
+  <div class="parent-anchor">
+    <p>I am the parent. My position is relative, so I act as the map boundaries for absolute children.</p>
+    <div class="box normal">Normal 1</div>
+    
+    <!-- This box completely ignores normal flow -->
+    <div class="box absolute-box">Absolute! (Pinned Bottom-Right)</div>
+    
+    <div class="box normal">Normal 2</div>
+  </div>
+</body>
+</html>

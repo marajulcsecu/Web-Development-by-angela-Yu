@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      4. align-items 
+      Aligns items vertically (along the cross axis).
+      Common values: stretch (default), center, flex-start, flex-end.
+    */
+    .container {
+      display: flex;
+      align-items: center; /* Centers items vertically */
+      height: 200px; /* Give container a height to see the effect */
+      background-color: #eee;
+      padding: 10px;
+    }
+    .item { background-color: #9c27b0; color: white; padding: 15px; margin: 5px; }
+    
+    .tall { height: 80px; }
+    .short { height: 30px; }
+  </style>
+</head>
+<body>
+  <h1>align-items (center)</h1>
+  <p>The container has a height of 200px. Items are vertically centered regardless of their own heights.</p>
+  <div class="container">
+    <div class="item tall">Tall Item</div>
+    <div class="item short">Short Item</div>
+    <div class="item">Normal Item</div>
+  </div>
+</body>
+</html>

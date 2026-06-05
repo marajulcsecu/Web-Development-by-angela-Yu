@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+      2. Media Queries (@media)
+      Allows you to apply CSS ONLY when certain conditions are met 
+      (like screen width being above or below a certain size).
+    */
+
+    /* DEFAULT (Mobile first approach) */
+    body {
+      background-color: lightblue;
+      font-family: Arial;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1::after {
+      content: " (Mobile Size)";
+    }
+
+    /* TABLET SIZE: If screen is 600px wide or MORE */
+    @media (min-width: 600px) {
+      body {
+        background-color: lightgreen;
+      }
+      h1::after {
+        content: " (Tablet Size)";
+      }
+    }
+
+    /* DESKTOP SIZE: If screen is 900px wide or MORE */
+    @media (min-width: 900px) {
+      body {
+        background-color: coral;
+      }
+      h1::after {
+        content: " (Desktop Size)";
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Resize your browser window!</h1>
+  <p>Default is Blue (Mobile).</p>
+  <p>>= 600px is Green (Tablet).</p>
+  <p>>= 900px is Coral (Desktop).</p>
+</body>
+</html>

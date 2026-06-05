@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+      5. Responsive Flexbox (No Media Queries needed!)
+      You don't always need @media to be responsive. 
+      Letting flex items wrap is a great responsive technique.
+    */
+    body { font-family: Arial; }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap; /* CRITICAL: Allows items to break onto new lines */
+      gap: 20px;
+      padding: 20px;
+      background: #eee;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      
+      /* flex-grow: 1, flex-shrink: 1, basis: 300px */
+      /* Each card tries to be 300px. If there's extra room, they grow. 
+         If there's not enough room (less than 300px available), it wraps to next line! */
+      flex: 1 1 300px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive layout without @media</h1>
+  <p>Resize the browser. The cards will perfectly stack on mobile, sit side-by-side on tablet, and stretch across on desktop without a single @media query!</p>
+
+  <div class="flex-container">
+    <div class="card"><h2>Card 1</h2><p>Some awesome content here.</p></div>
+    <div class="card"><h2>Card 2</h2><p>Some awesome content here.</p></div>
+    <div class="card"><h2>Card 3</h2><p>Some awesome content here.</p></div>
+  </div>
+</body>
+</html>

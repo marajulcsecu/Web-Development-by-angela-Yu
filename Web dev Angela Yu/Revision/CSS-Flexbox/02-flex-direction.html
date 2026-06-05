@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      2. flex-direction 
+      Changes the main axis. 
+      row (default): left to right.
+      column: top to bottom.
+    */
+    .container-row {
+      display: flex;
+      flex-direction: row; /* Default */
+      background-color: #eee; margin-bottom: 20px; padding: 10px;
+    }
+    .container-column {
+      display: flex;
+      flex-direction: column; /* Stacks vertically */
+      background-color: #eee; padding: 10px;
+    }
+    .item { background-color: #2196F3; color: white; padding: 15px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>flex-direction</h1>
+  <h2>Row (Default)</h2>
+  <div class="container-row">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+  
+  <h2>Column</h2>
+  <div class="container-column">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+</body>
+</html>

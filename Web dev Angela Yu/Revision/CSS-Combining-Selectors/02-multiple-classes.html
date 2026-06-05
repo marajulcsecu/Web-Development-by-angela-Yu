@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      2. Multiple Classes 
+      Target an element ONLY IF it has ALL the specified classes.
+      Again, NO SPACE between the dots.
+    */
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+    }
+    
+    .btn.primary {
+      background-color: blue;
+      color: white;
+    }
+
+    .btn.danger {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multiple Classes</h1>
+  <!-- Has .btn but neither .primary nor .danger -->
+  <button class="btn">Normal Button</button>
+  
+  <!-- Must have BOTH .btn AND .primary -->
+  <button class="btn primary">Primary Button</button>
+  
+  <!-- Must have BOTH .btn AND .danger -->
+  <button class="btn danger">Danger Button</button>
+  
+  <!-- Only has .danger, no base .btn padding/font -->
+  <button class="danger">I only have danger</button>
+</body>
+</html>

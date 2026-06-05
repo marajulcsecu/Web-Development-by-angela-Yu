@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      2. Specificity
+      The Cascade scores selectors. Higher score wins regardless of order.
+      Score logic (Simplified): Inline Styles > IDs > Classes > Elements
+    */
+    
+    /* Elements have low specificity */
+    p {
+      color: green;
+    }
+
+    /* Classes beat elements */
+    .highlight {
+      color: orange;
+    }
+
+    /* IDs beat classes */
+    #unique {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>Specificity</h1>
+  
+  <p>I am green (Element selector).</p>
+  
+  <p class="highlight">I am orange (Class beats Element).</p>
+  
+  <p class="highlight" id="unique">I am purple (ID beats Class and Element).</p>
+  
+  <!-- Inline styles beat IDs! -->
+  <p class="highlight" id="unique" style="color: brown;">I am brown (Inline style beats everything).</p>
+</body>
+</html>

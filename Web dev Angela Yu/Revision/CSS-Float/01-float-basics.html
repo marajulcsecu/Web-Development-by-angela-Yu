@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+      1. CSS Float Basics
+      Float was designed to wrap text around images (like in a newspaper).
+      It pulls the element to the left or right, letting inline content wrap around it.
+    */
+    body { font-family: Arial; line-height: 1.6; padding: 20px; }
+    
+    .float-left {
+      float: left;
+      margin: 0 20px 10px 0; /* Margin pushes text away from image */
+      width: 150px;
+    }
+
+    .float-right {
+      float: right;
+      margin: 0 0 10px 20px;
+      width: 150px;
+    }
+    
+    .box { background: skyblue; color: black; padding: 10px; text-align: center; border: 2px solid blue;}
+  </style>
+</head>
+<body>
+  <h1>CSS Float for Text Wrapping</h1>
+  
+  <p>
+    <div class="box float-left">I am Floated LEFT</div>
+    Notice how this text wraps around the blue box. Float pushes the box to the left side of its container, and the inline text is forced to flow into the remaining space on the right. This is exactly what floats were invented for: wrapping text around images.
+    If there is enough text, it will eventually wrap completely under the floated element, creating a newspaper-like layout.
+  </p>
+
+  <hr>
+
+  <p>
+    <div class="box float-right">I am Floated RIGHT</div>
+    Now this box is floated to the right. The text naturally flows around it on the left side. Notice the margins applied to the boxes to prevent the text from pressing right up against the edges.
+  </p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      10. Pseudo-class & Pseudo-element 
+      Pseudo-class (:) targets states (like hover, focus).
+      Pseudo-element (::) targets specific parts of an element (like before, after).
+    */
+    
+    /* Pseudo-class */
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    /* Pseudo-element */
+    p::before {
+      content: "👉 ";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <button>Hover over me!</button>
+  <p>This paragraph has an arrow injected by CSS before it.</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      2. Relative
+      Element is positioned relative to its NORMAL (static) resting place.
+      Nudging it leaves an empty "ghost" space where it used to be.
+    */
+    .box { width: 150px; height: 150px; padding: 10px; margin: 10px; color: white; }
+    .normal { background-color: #9E9E9E; }
+    
+    .relative-box {
+      background-color: #E91E63;
+      position: relative;
+      /* Nudge it from where it should have been */
+      top: 30px; 
+      left: 50px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <h1>position: relative</h1>
+  <p>The pink box moved, but Box 3 didn't shift up to fill the gap. The gap remains!</p>
+  <div class="box normal">Box 1</div>
+  <div class="box relative-box">Box 2 (Relative)</div>
+  <div class="box normal">Box 3</div>
+</body>
+</html>

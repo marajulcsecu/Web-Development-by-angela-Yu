@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      7. flex-grow, flex-shrink, and flex-basis
+      These properties apply to the ITEMS, not the container.
+    */
+    .container {
+      display: flex;
+      background-color: #eee;
+      padding: 10px;
+      gap: 10px;
+    }
+    .item {
+      background-color: #3f51b5; color: white; padding: 20px;
+    }
+    
+    .grow-1 {
+      flex-grow: 1; /* Takes up 1 proportion of available space */
+    }
+    .grow-2 {
+      flex-grow: 2; /* Takes up 2 proportions (twice as much extra space) */
+    }
+  </style>
+</head>
+<body>
+  <h1>flex-grow</h1>
+  <p>The first item grows by 1x. The second item grows by 2x.</p>
+  <div class="container">
+    <div class="item grow-1">Grow 1</div>
+    <div class="item grow-2">Grow 2</div>
+  </div>
+</body>
+</html>

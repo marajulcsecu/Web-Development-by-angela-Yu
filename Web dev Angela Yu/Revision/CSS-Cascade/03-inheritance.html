@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      3. Inheritance
+      Some CSS properties automatically pass down (inherit) from parent to child elements.
+      Text properties generally inherit. Box properties (margins, borders) do NOT inherit.
+    */
+    .parent {
+      color: teal;             /* This WILL inherit to the children */
+      font-family: monospace;  /* This WILL inherit */
+      border: 2px solid black; /* This will NOT inherit to the children */
+      padding: 20px;
+    }
+    
+    /* 
+      You can force inheritance using the 'inherit' keyword.
+      Let's force the border to inherit on the child.
+    */
+    .child-inherit-border {
+      border: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inheritance</h1>
+  <div class="parent">
+    I am the parent. I have a teal color, monospace font, and a black border.
+    
+    <p>I am a child. I naturally inherited the teal color and monospace font, but NOT the border.</p>
+    
+    <p class="child-inherit-border">I also inherited the text styles, but I used `border: inherit;` to force the border down as well!</p>
+  </div>
+</body>
+</html>

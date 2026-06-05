@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      3. The Clearfix Solution
+      To fix the collapsing parent, we use a CSS hack called "clearfix".
+      We use the ::after pseudo-element to place an invisible block AFTER the floated items, 
+      and use 'clear: both' to force the parent to stretch down past the floats.
+    */
+    .clearfix::after {
+      content: "";
+      display: table; /* Or block */
+      clear: both;    /* Clears left and right floats */
+    }
+
+    .wrapper {
+      border: 4px solid green; /* Now it properly wraps the boxes! */
+      background-color: #eeffee;
+    }
+
+    .box {
+      float: left;
+      width: 45%; 
+      margin: 2%;
+      padding: 20px;
+      background: teal; color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Clearfix Solution</h1>
+  <p>By adding the <code>.clearfix</code> class to the parent wrapper, the GREEN border now correctly surrounds both teal boxes.</p>
+  
+  <div class="wrapper clearfix">
+    <div class="box">Left Box</div>
+    <div class="box">Right Box</div>
+  </div>
+  
+  <p>Now this paragraph sits perfectly below the wrapper, as intended.</p>
+</body>
+</html>

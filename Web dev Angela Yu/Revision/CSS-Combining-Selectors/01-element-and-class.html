@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      1. Element AND Class 
+      Target a specific element ONLY IF it also has a specific class.
+      Notice there is NO SPACE between the element (`p`) and the dot (`.`).
+    */
+    p.special {
+      color: white;
+      background-color: purple;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Element + Class</h1>
+  <p>I am a normal paragraph.</p>
+  <p class="special">I am a paragraph with the 'special' class. (I get styled!)</p>
+  <div class="special">I am a div with the 'special' class. (I do NOT get styled because I am not a paragraph!)</div>
+</body>
+</html>

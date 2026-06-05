@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      5. Box Shadows
+      Adds depth. Values are:
+      X-offset, Y-offset, Blur radius, Spread radius (optional), Color.
+    */
+    .floating-box {
+      width: 200px;
+      padding: 30px;
+      background-color: white;
+      border-radius: 8px;
+      
+      /* X=5px right, Y=10px down, Blur=15px, Color=black at 20% opacity */
+      box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body style="background-color: #eaeff1; padding: 50px;">
+  <h1>Box Shadows</h1>
+  <div class="floating-box">
+    I look like I am floating above the page because of the box-shadow!
+  </div>
+</body>
+</html>

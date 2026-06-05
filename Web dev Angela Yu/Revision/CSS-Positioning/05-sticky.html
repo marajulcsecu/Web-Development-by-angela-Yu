@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      5. Sticky
+      A hybrid of relative and fixed.
+      It acts like `relative` until you scroll past a certain point, 
+      then it "sticks" to the screen like `fixed` until its parent container scrolls away.
+    */
+    body { font-family: Arial; padding: 20px; }
+    
+    .container {
+      height: 800px;
+      background-color: #f0f0f0;
+      margin-top: 50px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 20px; /* Sticks to the screen once there's only 20px between it and the top */
+      background-color: #9C27B0; color: white;
+      padding: 15px; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>position: sticky</h1>
+  <p>Scroll down. The purple bar will scroll normally until it hits 20px from the top of the browser, then it will stick!</p>
+  
+  <div class="container">
+    <p>Some content above the sticky element...</p>
+    <br><br><br>
+    
+    <div class="sticky-header">I am Sticky!</div>
+    
+    <p style="margin-top: 100px;">Keep scrolling down inside this gray container...</p>
+    <p style="margin-top: 100px;">When this container scrolls out of view, the sticky header goes with it.</p>
+    <p style="margin-top: 100px;">Keep scrolling...</p>
+    <p style="margin-top: 100px;">Keep scrolling...</p>
+  </div>
+  <p style="margin-top: 500px;">End of page.</p>
+</body>
+</html>

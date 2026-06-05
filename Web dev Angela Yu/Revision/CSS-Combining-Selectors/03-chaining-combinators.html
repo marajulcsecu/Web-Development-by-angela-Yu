@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      3. Chaining Combinators 
+      You can mix descendant (space), child (>), and classes to make a very specific path.
+    */
+    
+    /* 
+      Read right-to-left: 
+      "Find an <a> tag, that is inside an <li>, that is a direct child (>) of a <ul> with class 'menu'" 
+    */
+    ul.menu > li a {
+      color: green;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    /* Hover effect just on the link */
+    ul.menu > li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chaining Combinators</h1>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li>
+      <!-- Inside a div, so not a direct child oful.menu anymore? Note: li is the direct child, a is descendant -->
+      <div><a href="#">Deep link (still works because 'a' is a descendant of 'li')</a></div>
+    </li>
+  </ul>
+  
+  <ul class="other-list">
+    <li><a href="#">Not the menu</a></li>
+  </ul>
+</body>
+</html>

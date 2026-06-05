@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 
+      3. Fluid Layouts (Percentages vs Pixels)
+      Avoid fixed pixel widths (width: 800px) because they break on small screens.
+      Use % or vw/vh, and `max-width`.
+    */
+    body { font-family: Arial; padding: 20px; }
+
+    .fixed-box {
+      width: 600px; /* BAD FOR MOBILE: Will cause horizontal scrolling on tiny screens */
+      background: red; color: white; padding: 20px; margin-bottom: 20px;
+    }
+
+    .fluid-box {
+      width: 100%; /* Spans full width of parent */
+      max-width: 600px; /* GOOD: Adapts to small screens, but stops growing at 600px on big screens */
+      background: green; color: white; padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fluid Layouts</h1>
+  <p>Shrink your browser width below 600px to see the difference.</p>
+  
+  <div class="fixed-box">
+    I am exactly 600px wide. I will burst out of small screens!
+  </div>
+
+  <div class="fluid-box">
+    I am 100% wide, up to a maximum of 600px. I shrink when I need to!
+  </div>
+</body>
+</html>

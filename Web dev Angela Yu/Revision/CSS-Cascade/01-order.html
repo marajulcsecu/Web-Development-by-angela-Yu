@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      1. Order of Rules
+      The Cascade reads from top to bottom.
+      If two rules have the EXACT SAME specificity, the one that comes LAST wins.
+    */
+    p {
+      color: blue; /* First it says "make paragraphs blue" */
+    }
+
+    p {
+      color: red;  /* Then it says "make paragraphs red". This one wins! */
+    }
+  </style>
+</head>
+<body>
+  <h1>Order of Rules</h1>
+  <p>I am red because my rule came last in the CSS.</p>
+</body>
+</html>

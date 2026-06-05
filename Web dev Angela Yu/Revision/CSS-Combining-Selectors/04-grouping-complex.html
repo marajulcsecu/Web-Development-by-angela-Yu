@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      4. Grouping Complex Selectors 
+      You can comma-separate long, specific selector chains.
+    */
+    
+    .card h2, 
+    .banner h1.title, 
+    #footer a:hover {
+      color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grouping Combined Selectors</h1>
+  
+  <div class="card">
+    <h2>I am an h2 inside a card</h2>
+  </div>
+  
+  <div class="banner">
+    <h1 class="title">I am an h1 with class 'title' inside a banner</h1>
+    <h1>I am an h1 inside a banner WITHOUT class 'title'</h1>
+  </div>
+  
+  <div id="footer">
+    <a href="#">Hover over me in the footer!</a>
+  </div>
+</body>
+</html>

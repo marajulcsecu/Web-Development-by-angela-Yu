@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      7. Child Selector 
+      Targets ONLY direct children, not deeper descendants.
+      Uses the greater-than sign (>).
+    */
+    .box > p {
+      font-weight: bold;
+      color: teal;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <!-- Direct child -->
+    <p>I am a direct child. I am bold and teal.</p>
+    
+    <section>
+      <!-- NOT a direct child (it's inside <section>) -->
+      <p>I am nested deeper. I am normal.</p>
+    </section>
+  </div>
+</body>
+</html>

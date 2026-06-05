@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      1. Static (Default)
+      Elements flow top-to-bottom, left-to-right as they appear in the HTML.
+      Properties like top, left, bottom, right, and z-index do NOTHING.
+    */
+    .box {
+      width: 150px; height: 150px; padding: 10px; margin: 10px; color: white;
+      background-color: #2196F3;
+      
+      /* These do nothing because default position is static */
+      position: static; 
+      top: 50px; 
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>position: static (Default)</h1>
+  <p>Notice how top and left do absolutely nothing here. Elements just stack naturally.</p>
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* 
+      9. Attribute Selector 
+      Targets elements based on HTML attributes.
+      Uses square brackets ([]).
+    */
+    input[type="password"] {
+      background-color: pink;
+    }
+    
+    a[target="_blank"] {
+      color: orange;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label>Text: <input type="text"></label><br>
+    <label>Password: <input type="password"></label> <!-- Pink background -->
+  </form>
+  <br>
+  <a href="#">Normal link</a><br>
+  <a href="#" target="_blank">Opens in new tab (orange)</a>
+</body>
+</html>
